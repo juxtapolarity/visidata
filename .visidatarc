@@ -1,0 +1,11 @@
+options.csv_delimiter = ';'
+options.clipboard = 'osc52'
+#
+# Use OSC52 for "system clipboard" yanks (Y/gY/zY/gzY)
+options.clipboard_copy_cmd = '/home/juls/.local/bin/osc52-copy'
+# options.clipboard_copy_cmd = os.path.expanduser('~/.local/bin/osc52-copy')
+
+# (Optional) disable paste-from-system-clipboard in headless SSH
+# because it usually relies on xclip/xsel/Wayland:
+options.clipboard_paste_cmd = ''
+

@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+data="$(cat)"
+
+# Emit OSC52 to the *controlling terminal* so it works even when stdout is redirected
+printf '\033]52;c;%s\007' "$(printf %s "$data" | base64 | tr -d '\n')" > /dev/tty
+
